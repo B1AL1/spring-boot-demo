@@ -6,7 +6,6 @@ import java.time.LocalDate;
 import java.time.Period;
 
 //klasa do tworzenia obiektów student
-
 @Entity //hibernate
 @Table //tabela bazy danych
 public class Student {

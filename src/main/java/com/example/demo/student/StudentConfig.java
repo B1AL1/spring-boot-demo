@@ -10,8 +10,6 @@ import java.util.List;
 
 @Configuration
 public class StudentConfig {
-
-
     //dodanie użytkowników z poziomu kodu
     @Bean
     CommandLineRunner commandLineRunner(StudentRepository repository){

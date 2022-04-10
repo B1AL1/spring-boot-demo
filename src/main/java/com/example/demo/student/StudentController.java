@@ -6,8 +6,9 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 
+//kontroler dla studentów
 @RestController
-@RequestMapping(path = "api/v1/student")
+@RequestMapping(path = "api/v1/student") //endpoint dla http requestów
 public class StudentController {
 
     private final StudentService studentService;
@@ -16,11 +17,13 @@ public class StudentController {
         this.studentService = studentService;
     }
 
+    //wypisanie studentów za pomocą GET request
     @GetMapping
     public List<Student> getStudent() {
         return studentService.getStudents();
     }
 
+    //dodanie nowego studenta za pomocą POST request
     @PostMapping
     public void registerNewStudent(@RequestBody Student student) {
         studentService.addNewStudent(student);

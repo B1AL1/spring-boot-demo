@@ -19,10 +19,12 @@ public class StudentService {
         this.studentRepository = studentRepository;
     }
 
+    //wypisanie wszystkich studentów z bazy danych
     public List<Student> getStudents() {
         return studentRepository.findAll();
     }
 
+    //dodawanie nowego studenta, jeśli email nie jest zajęty
     public void addNewStudent(Student student) {
         Optional<Student> studentByEmail = studentRepository.findStudentByEmail(student.getEmail());
         if(studentByEmail.isPresent()){

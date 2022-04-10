@@ -5,8 +5,10 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.time.Period;
 
-@Entity
-@Table
+//klasa do tworzenia obiektów student
+
+@Entity //hibernate
+@Table //tabela bazy danych
 public class Student {
     @Id
     @SequenceGenerator(
@@ -23,6 +25,7 @@ public class Student {
     private String email;
     private LocalDate dob;
 
+    //niezapisywanie zmiennej wieku do bazy danych
     @Transient
     private Integer age;
 
@@ -74,6 +77,7 @@ public class Student {
         this.dob = dob;
     }
 
+    //wyliczenie wieku na podstawie daty urodzenia
     public Integer getAge() {
         return Period.between(dob, LocalDate.now()).getYears();
     }

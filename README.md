@@ -8,7 +8,7 @@ To demonstrate usage of technologies I have learned.
 - Java 18,
 - JDK 18,
 - Maven,
-- Spring Boot 3.0.0.
+- Spring Boot 2.6.7.
 
 **Software required to run project:**
 - IntelliJ IDEA 2021.3.3,
